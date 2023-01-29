@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .header-row {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+  .header-label {
+    font-size: 28px;
+    font-weight: bolder !important;
+  }
+}

@@ -1,0 +1,21 @@
+.table {
+  border-collapse: separate;
+  border-spacing: 12px 0;
+  background: #fef9f5;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.table thead tr th {
+  border-radius: 10px 10px 0 0;
+  border: 2px solid transparent;
+}
+.table tbody tr td {
+  border: 2px solid transparent;
+}
+
+.th-wrapper {
+  background: #fee5df;
+  padding: 20px;
+  border-radius: 10px;
+}
