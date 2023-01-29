@@ -14,16 +14,7 @@ import CardFiles from "./../cards/CardFiles.vue";
       </div>
     </div>
     <div v-for="info in data" :key="info.id" class="d-flex flex-column mb-3">
-      <CardFiles />
-      <!-- {data.map((element) => {
-          return (
-            <CardFiles
-              key={element.id}
-              data={element}
-              icon={iconsImg[`${element.icon}.png`]}
-            />
-          );
-        })} -->
+      <CardFiles :data="info" />
     </div>
   </div>
 </template>
