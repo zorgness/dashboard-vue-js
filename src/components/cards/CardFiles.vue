@@ -1,8 +1,7 @@
 <script setup>
 const props = defineProps(["data"]);
-
 const { icon, title, date, fileWeight } = props.data;
-const iconImg = `../../assets/icons/figma.png`;
+const iconImg = `src/assets/icons/${icon}.png`;
 </script>
 
 <template>

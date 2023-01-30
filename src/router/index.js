@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HelloWorld from "../views/HelloWorld.vue";
 import Profile from "../views/Profile.vue";
 import Schedule from "../views/Schedule.vue";
 import Overview from "../views/Overview.vue";
@@ -30,11 +29,6 @@ const routes = [
     path: "/settings",
     name: "Settings",
     component: Settings,
-  },
-  {
-    path: "/helloworld",
-    name: "HelloWorld",
-    component: HelloWorld,
   },
 ];
 const router = createRouter({

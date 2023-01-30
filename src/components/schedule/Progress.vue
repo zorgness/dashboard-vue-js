@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="mx-4" style="margin-top: 38px">
+  <div class="mx-4">
     <div
       class="projet-title-container d-flex justify-content-between align-items-baseline"
     >

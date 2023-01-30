@@ -13,11 +13,11 @@ console.log(data);
         <div>
           <button
             type="button"
-            class="dropdown-toggle dropdown-toggle-split bg-transparent border-0 text-dark"
+            class="dropdown-toggle dropdown-toggle-split btn btn-transparent border-0 text-dark"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <span>Aug 3, 2021- Aug 7, 2021 </span>
+            Aug 3, 2021- Aug 7, 2021
           </button>
 
           <ul class="dropdown-menu">
@@ -39,10 +39,10 @@ console.log(data);
         <thead>
           <tr>
             <th v-for="info in data" :key="info.id" class="col-table${id}">
-              <div className="th-wrapper th-wrapper${id}">
-                {day}
+              <div class="th-wrapper th-wrapper${id}">
+                {{ info.day }}
                 <br />
-                <span>{date}</span>
+                <span>{{ info.date }}</span>
               </div>
             </th>
           </tr>
@@ -50,17 +50,17 @@ console.log(data);
         <tbody>
           <tr>
             <td v-for="info in data" :key="info.id" class="col-table${id}">
-              hours[0]
+              {{ info?.hours?.[0] ?? "_" }}
             </td>
           </tr>
           <tr>
             <td v-for="info in data" :key="info.id" class="col-table${id}">
-              hours[1]
+              {{ info?.hours?.[1] ?? "_" }}
             </td>
           </tr>
           <tr>
             <td v-for="info in data" :key="info.id" class="col-table${id}">
-              hours[2]
+              {{ info?.hours?.[2] ?? "_" }}
             </td>
           </tr>
         </tbody>

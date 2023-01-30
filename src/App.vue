@@ -15,7 +15,7 @@ watchEffect(title, () => {
 <template>
   <div class="d-flex">
     <Navigation />
-    <div class="container d-flex flex-column">
+    <div class="container">
       <div class="row header-row row-cols-lg-2">
         <div class="col content-left">
           <HeaderApp :title="title" />
@@ -24,6 +24,7 @@ watchEffect(title, () => {
           <Search />
         </div>
       </div>
+
       <router-view></router-view>
     </div>
   </div>

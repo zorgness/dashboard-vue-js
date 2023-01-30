@@ -15,20 +15,23 @@ export default {
     </div>
 
     <div>
-      <button
-        type="button"
-        class="dropdown-toggle dropdown-toggle-split bg-transparent border-0 text-dark"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <span>Aug 5, 2021</span>
-      </button>
+      <div class="dropdown">
+        <button
+          type="button"
+          id="dropdown-basic"
+          aria-expanded="false"
+          data-bs-toggle="dropdown"
+          class="border-0 dropdown-toggle btn btn-transparent"
+        >
+          Aug 5, 2021
+        </button>
 
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Aug 5, 2021</a></li>
-        <li><a class="dropdown-item" href="#">Aug 6, 2021</a></li>
-        <li><a class="dropdown-item" href="#">Aug 7, 2021</a></li>
-      </ul>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Aug 5, 2021</a></li>
+          <li><a class="dropdown-item" href="#">Aug 6, 2021</a></li>
+          <li><a class="dropdown-item" href="#">Aug 7, 2021</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
