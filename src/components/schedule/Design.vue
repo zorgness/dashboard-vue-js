@@ -4,11 +4,7 @@ import { data } from "../../data/dataDesign.js";
 </script>
 
 <template>
-  <div
-    v-for="info in data"
-    :key="info.id"
-    className="d-flex flex-column mx-4 my-3"
-  >
-    <CardDesign :data="info" />
+  <div className="d-flex flex-column mx-4 my-3 gap-3">
+    <CardDesign v-for="info in data" :key="info.id" :data="info" />
   </div>
 </template>
