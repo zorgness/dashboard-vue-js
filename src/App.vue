@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
-import { ref, watchEffect } from "vue";
+import { onMounted, ref, watchEffect } from "vue";
 import Navigation from "./components/Navigation.vue";
 import HeaderApp from "./components/Header.vue";
 import Search from "./components/Search.vue";
@@ -15,7 +15,7 @@ watchEffect(async () => {
   await router.isReady();
 
   title.value = changeTitle(route.path);
-});
+}, [route.path]);
 </script>
 
 <template>

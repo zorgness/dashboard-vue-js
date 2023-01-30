@@ -1,5 +1,5 @@
-export const changeTitle = () => {
-  switch (window.location.pathname) {
+export const changeTitle = (location) => {
+  switch (location) {
     case "/schedule":
       return "Schedule";
     case "/overview":
