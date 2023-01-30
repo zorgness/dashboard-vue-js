@@ -1,20 +1,23 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { watchEffect, ref } from "vue";
 
 const input = ref(null);
 const show = ref(false);
-onMounted(() => {
-  input.value.focus();
+watchEffect(() => {
+  input?.value?.focus();
 });
 
 const handleShow = () => {
   show.value = !show.value;
 };
+const handleMouseEnter = () => {
+  input?.value?.focus();
+};
 </script>
 
 <template>
   <div class="d-flex align-items-center justify-content-between mx-4 mt-4 mb-1">
-    <div class="form-input">
+    <div class="form-input" @mouseenter="handleMouseEnter">
       <form class="d-flex form-group" id="input-container">
         <i class="fa-solid fa-magnifying-glass lookup"></i>
 
@@ -29,12 +32,18 @@ const handleShow = () => {
     </div>
 
     <div class="d-flex align-items-center search-mobile-container">
-      <form v-if="show" class="d-flex form-group" id="input-mobile-container">
+      <form
+        v-if="show"
+        class="d-flex form-group"
+        id="input-mobile-container"
+        @mouseenter="handleMouseEnter"
+      >
         <input
           type="search"
           placeholder="Search"
           class="form-control me-2 input-search border-0"
           aria-label="Search"
+          ref="input"
         />
       </form>
 
