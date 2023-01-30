@@ -1,7 +1,6 @@
 <script setup>
 import CardDesign from "./../cards/CardDesign.vue";
 import { data } from "../../data/dataDesign.js";
-console.log(data);
 </script>
 
 <template>
