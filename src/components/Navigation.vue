@@ -24,7 +24,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="mt-4 mx-2 offcanvas-title h5">
+        <div class="mt-4 mx-2 offcanvas-title diamond-container">
           <i class="fa-solid fa-diamond diamond-red"></i
           ><i class="fa-solid fa-diamond diamond-white"></i>
         </div>

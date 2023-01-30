@@ -14,7 +14,14 @@
   background-color: #f7f7f7;
 }
 
+#input-mobile-container > input {
+  background-color: #f7f7f7;
+}
+
 @media (min-width: 768px) {
+  #input-mobile-container > input {
+    width: 270px;
+  }
   .form-input {
     display: block;
   }
@@ -24,6 +31,9 @@
 }
 
 @media (max-width: 768px) {
+  #input-mobile-container > input {
+    width: 135px;
+  }
   .form-input {
     display: none;
   }

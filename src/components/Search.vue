@@ -2,9 +2,14 @@
 import { onMounted, ref } from "vue";
 
 const input = ref(null);
+const show = ref(false);
 onMounted(() => {
   input.value.focus();
 });
+
+const handleShow = () => {
+  show.value = !show.value;
+};
 </script>
 
 <template>
@@ -24,18 +29,17 @@ onMounted(() => {
     </div>
 
     <div class="d-flex align-items-center search-mobile-container">
-      <!-- <form className="d-flex form-group">
+      <form v-if="show" class="d-flex form-group" id="input-mobile-container">
         <input
-          class="form-control"
           type="search"
           placeholder="Search"
-          className="me-2 input-search border-0"
+          class="form-control me-2 input-search border-0"
           aria-label="Search"
         />
-      </form> -->
+      </form>
 
-      <div className="lookup-mobile mx-3">
-        <i className="fa-solid fa-magnifying-glass"></i>
+      <div @click="handleShow" class="lookup-mobile mx-3">
+        <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div>
         <img
