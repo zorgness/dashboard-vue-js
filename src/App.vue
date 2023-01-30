@@ -1,14 +1,20 @@
 <script setup>
+import { useRoute, useRouter } from "vue-router";
 import { ref, watchEffect } from "vue";
 import Navigation from "./components/Navigation.vue";
 import HeaderApp from "./components/Header.vue";
 import Search from "./components/Search.vue";
 import { changeTitle } from "./utils/changeTitle";
 
-const title = ref(changeTitle());
+const route = useRoute();
+const router = useRouter();
 
-watchEffect(title, () => {
-  title.value = changeTitle();
+const title = ref(changeTitle(route.path));
+
+watchEffect(async () => {
+  await router.isReady();
+
+  title.value = changeTitle(route.path);
 });
 </script>
 
