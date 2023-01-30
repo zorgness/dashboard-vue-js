@@ -11,11 +11,13 @@ const router = useRouter();
 
 const title = ref(changeTitle(route.path));
 
-watchEffect(async () => {
+onMounted(async () => {
   await router.isReady();
+});
 
+watchEffect(() => {
   title.value = changeTitle(route.path);
-}, [route.path]);
+});
 </script>
 
 <template>
