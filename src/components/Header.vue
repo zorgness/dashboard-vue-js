@@ -1,9 +1,9 @@
-<script>
-export default {
-  props: {
-    title: String,
-  },
-};
+<script setup lang="ts">
+interface TitleProps {
+  title: String;
+}
+
+defineProps<TitleProps>();
 </script>
 
 <template>

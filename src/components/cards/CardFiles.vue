@@ -1,6 +1,20 @@
-<script setup>
-const props = defineProps(["data"]);
+<script setup lang="ts">
+import { type PropType } from "vue";
+interface CardFilesProps {
+  icon: String;
+  title: String;
+  date: String;
+  fileWeight: Number;
+}
+const props = defineProps({
+  data: {
+    type: Object as PropType<CardFilesProps>,
+    required: true,
+  },
+});
+
 const { icon, title, date, fileWeight } = props.data;
+
 const iconImg = `src/assets/icons/${icon}.png`;
 </script>
 

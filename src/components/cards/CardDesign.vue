@@ -1,5 +1,18 @@
-<script setup>
-const props = defineProps(["data"]);
+<script setup lang="ts">
+import { type PropType } from "vue";
+interface CardDesignProps {
+  icon: String;
+  title: String;
+  start: String;
+  end: String;
+  profilesImgUrl?: String;
+}
+const props = defineProps({
+  data: {
+    type: Object as PropType<CardDesignProps>,
+    required: true,
+  },
+});
 
 const { icon, title, start, end, profilesImgUrl } = props.data;
 </script>
