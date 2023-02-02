@@ -14,7 +14,7 @@ const props = defineProps({
   },
 });
 
-const { icon, title, start, end, profilesImgUrl } = props.data;
+const { icon, title, start, end, profilesImgUrl } = props?.data;
 </script>
 <template>
   <div class="card-product">

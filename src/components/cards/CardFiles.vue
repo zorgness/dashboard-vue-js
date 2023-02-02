@@ -15,7 +15,7 @@ const props = defineProps({
 
 const { icon, title, date, fileWeight } = props.data;
 
-const iconImg = `src/assets/icons/${icon}.png`;
+const iconImg = `src/assets/icons/${icon}.png` || `@assets/icons/${icon}.png`;
 </script>
 
 <template>
